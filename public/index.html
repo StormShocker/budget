@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge"
+        http-equiv="X-UA-Compatible">
+  <meta content="#317EFB"
+        name="theme-color">
+  <link href="icons/icon-192x192.png"
+        rel="shortcut icon"
+        type="image/x-icon">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
+  <link href="styles.css"
+        rel="stylesheet">
+  <title>Budget Tracker</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="total">
+      <div class="total">
+        Your total is: $<span id="total">0</span>
+      </div>
+    </div>
+    <div class="form">
+      <input id="t-name"
+           placeholder="Name of transaction"
+           type="text"> <input id="t-amount"
+           min="0"
+           placeholder="Transaction amount"
+           type="number"> <button id="add-btn"> Add Funds</button> <button id="sub-btn"> Subtract Funds</button>
+      <p class="error"></p>
+    </div>
+    <div class="transactions">
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <canvas id="myChart"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> 
+  <script src="index.js"></script>
+</body>
+</html>
